@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Options for Meet Attendance Extension</title>
+  <link rel="stylesheet" href="/general-styles.css">
+  <link rel="stylesheet" href="/options/options-styles.css">
+</head>
+<body>
+  <h1>Meet Attendance Tracker</h1>
+  <h3>Settings</h3>
+  <div class="startup startup-section hidden">
+    <div class="div-circle-absolute"></div>
+    <svg class="startup__icon icon-startup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path d="M498.791,161.127c-17.545-17.546-46.094-17.545-63.645,0.004c-5.398,5.403-39.863,39.896-45.128,45.166V87.426c0-12.02-4.681-23.32-13.181-31.819L334.412,13.18C325.913,4.68,314.612,0,302.592,0H45.018c-24.813,0-45,20.187-45,45v422c0,24.813,20.187,45,45,45h300c24.813,0,45-20.187,45-45V333.631L498.79,224.767C516.377,207.181,516.381,178.715,498.791,161.127z M300.019,30c2.834,0,8.295-0.491,13.18,4.393l42.426,42.427c4.76,4.761,4.394,9.978,4.394,13.18h-60V30z M360.018,467c0,8.271-6.728,15-15,15h-300c-8.271,0-15-6.729-15-15V45c0-8.271,6.729-15,15-15h225v75c0,8.284,6.716,15,15,15h75v116.323c0,0-44.254,44.292-44.256,44.293l-21.203,21.204c-1.646,1.646-2.888,3.654-3.624,5.863l-21.214,63.64c-1.797,5.39-0.394,11.333,3.624,15.35c4.023,4.023,9.968,5.419,15.35,3.624l63.64-21.213c2.209-0.736,4.217-1.977,5.863-3.624l1.82-1.82V467z M326.378,312.427l21.213,21.213l-8.103,8.103l-31.819,10.606l10.606-31.82L326.378,312.427z M368.8,312.422l-21.213-21.213c11.296-11.305,61.465-61.517,72.105-72.166l21.213,21.213L368.8,312.422z M477.573,203.558l-15.463,15.476l-21.213-21.213l15.468-15.481c5.852-5.849,15.366-5.848,21.214,0C483.426,188.19,483.457,197.673,477.573,203.558z"/></g></g><g><g><path d="M285.018,150h-210c-8.284,0-15,6.716-15,15s6.716,15,15,15h210c8.284,0,15-6.716,15-15S293.302,150,285.018,150z"/></g></g><g><g><path d="M225.018,210h-150c-8.284,0-15,6.716-15,15s6.716,15,15,15h150c8.284,0,15-6.716,15-15S233.302,210,225.018,210z"/></g></g><g><g><path d="M225.018,270h-150c-8.284,0-15,6.716-15,15s6.716,15,15,15h150c8.284,0,15-6.716,15-15S233.302,270,225.018,270z"/></g></g><g><g><path d="M225.018,330h-150c-8.284,0-15,6.716-15,15s6.716,15,15,15h150c8.284,0,15-6.716,15-15S233.302,330,225.018,330z"/></g></g><g><g><path d="M285.018,422h-90c-8.284,0-15,6.716-15,15s6.716,15,15,15h90c8.284,0,15-6.716,15-15S293.302,422,285.018,422z"/></g></g></svg>
+    <button class="btn btn--fill-blue" id="startup__setup">Set name list</button>
+  </div>
+
+
+  <div class="overlay overlay-section hidden">
+    <div class="modal modal--add">
+      <svg class="table__head-icon icon icon-exit-modal" id="cross-icon" viewBox="0 0 329.26933 329"xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+
+      <div class="content">
+        
+        <div class="content-grid">
+          
+
+          <div class="div-part div-left">
+            <div class="div-circle-absolute"></div>
+            <div class="form__config-name">
+              <h2>Track by name list</h2>
+              <p>When you record attendance, the current attendees will be compared with the given name list, and generate a list of absentees.</p>
+              <p>Best for meetings with students from different classes.</p>
+            </div>
+            <div class="form__config-seat hidden">
+              <h2>Track by seat number</h2>
+              <p>When you record attendance, each attendees’ <span class="form__info-left">5th-6th</span> character (seat number) will be recorded, and generate a list of absentees according to missing seat numbers.</p>
+              <p>Best for meetings with students from the same class.</p>
+            </div>
+          </div>
+        
+
+          <div class="div-part">
+            <div class="div-form">
+              <div class="form__section">
+                <label class="form__switch">
+                  <input id="checkbox" type="checkbox">
+                  <span class="form__slider"></span>
+                </label>
+                <span>Compare with seat number</span>
+              </div>
+              <div class="form__section">
+                <label class="form__label" for="name">Name of name list</label>
+                <input class="form__input" id="name" type="text">
+                <span class="form__error-text"></span>
+              </div>
+
+              <div class="form__section form__config-name">
+                <label class="form__label" for="list">Name list</label>
+                <textarea class="form__textfield" id="list"></textarea>
+                <!-- <div id="list" class="form__textfield" contentEditable=true data-ph="Enter text"></div> -->
+                <span class="form__error-text"></span>
+              </div>
+
+              <div class="form__section form__config-seat hidden">
+                <label class="form__label" for="seat-number-to">Range of seat numbers</label>
+                <input class="form__number" id="seat-number-to" type="number">
+                <span class="form__error-text"></span>
+              </div>
+              <div class="form__section form__config-seat hidden">
+                <label class="form__label" for="seat-position">Seat number position in username</label>
+                <select class="form__select" id="seat-position">
+                  <option value="junior">5th-6th character (HHHS 初中 format)</option>
+                  <option value="senior">2nd-3rd character (HHHS 高中 format)</option>
+
+                </select>
+                <span class="form__info-text">ie: J2X <span class="underline">01</span> XXX </span>
+              </div>
+              <span class="form__status"></span>
+
+              <input id="submit" class="btn btn--fill-blue form__btn" type="submit" value="Done">
+            </div>
+          </div>
+
+
+          <div class="div-part div-right">
+            <div class="div-triangle-absolute"></div>
+            <div class="div-right-inner form__config-name">
+              <p><strong>Separate names with line breaks</strong></p>
+              <p>
+                ie: <br>
+                J0X 00 XXX <br>
+                J0X 01 XXX <br>
+                J0X 02 XXX <br>
+                J0X 03 XXX <br>
+              </p>
+            </div>
+            <div class="div-right-inner form__config-seat hidden">
+              <p><strong>Note:</strong></p>
+              <p>All students in the meeting must follow the seat number format. Students with invalid username format will be automatically recorded as absent.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="main-section">
+    <div class="main-content">
+      <div class="div-circle-absolute"></div>
+      <div class="sheet">
+        <div class="overlay">
+          <div class="modal sheet___modal">
+            <svg class="table__head-icon icon icon-exit-modal" id="cross-icon" viewBox="0 0 329.26933 329"xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+          </div>
+        </div>
+        <div class="sheet__tabs">
+          <div class="sheet__tab-icon">
+            <svg id="sheet__open-modal" class="icon" enable-background="new 0 0 511 511" viewBox="0 0 511 511" xmlns="http://www.w3.org/2000/svg"><g><path d="m465.5 98.787-98.787-98.787h-261.213v61h-60v450h360v-61h60zm-90-47.574 39.787 39.787h-39.787zm0 429.787h-300v-390h30v359h270zm-240-61v-390h210v91h90v299z"/><path d="m284.5 150c-66.168 0-120 53.832-120 120s53.832 120 120 120 120-53.832 120-120-53.832-120-120-120zm0 210c-49.626 0-90-40.374-90-90s40.374-90 90-90 90 40.374 90 90-40.374 90-90 90z"/><path d="m299.5 209.5h-30v45h-45v30h45v45h30v-45h45v-30h-45z"/></g></svg>
+          </div>
+        </div>
+        <div class="sheet__startup">
+          <svg class="sheet__startup-arrow" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m365.291 168.033a295.963 295.963 0 0 0 -293.291 295.967 24 24 0 0 1 -48 0 343.66 343.66 0 0 1 341.376-343.968l31.958 23.968zm-14.891 91.167 128-96a24 24 0 0 0 0-38.4l-128-96a24 24 0 1 0 -28.8 38.4l102.4 76.8-102.4 76.8a24 24 0 1 0 28.8 38.4z"/></svg>
+          <span>Select a list  to configure</span>
+        </div>
+        <div class="sheet__body hidden">
+          <div class="sheet__body-grid">
+            <div class="sheet__body-wrapper">
+              <div class="sheet__body-item">
+                <strong class="sheet__body-label">Color:</strong>
+                <input class="sheet__body-field" type="color" id="sheet__color">
+              </div>
+            
+              <div class="sheet__body-item sheet__config-seat">
+                <strong class="sheet__body-label">Seat number position in username:</strong>
+                <select class="sheet__body-field" id="sheet__select">
+                  <option value="junior">5th-6th character (HHHS 初中 format)</option>
+                  <option value="senior">2nd-3rd character (HHHS 高中 format)</option>
+                </select>
+              </div>
+              <div class="sheet__body-item sheet__config-seat">
+                <strong class="sheet__body-label">Range of seat numbers:</strong>
+                <input class="sheet__body-field" type="number" id="sheet__number">
+              </div>
+              <div class="sheet__body-item sheet__config-name hidden">
+                <strong class="sheet__body-label">Name list:</strong>
+                <textarea class="sheet__body-field sheet__textfield hidden" id="sheet__textfield"></textarea>
+                <ol class="sheet__body-ol">
+                </ol>
+              </div>
+            </div>
+            <div class="sheet__tools">
+              <svg class="icon sheet__bin-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="m424 64h-88v-16c0-26.467-21.533-48-48-48h-64c-26.467 0-48 21.533-48 48v16h-88c-22.056 0-40 17.944-40 40v56c0 8.836 7.164 16 16 16h8.744l13.823 290.283c1.221 25.636 22.281 45.717 47.945 45.717h242.976c25.665 0 46.725-20.081 47.945-45.717l13.823-290.283h8.744c8.836 0 16-7.164 16-16v-56c0-22.056-17.944-40-40-40zm-216-16c0-8.822 7.178-16 16-16h64c8.822 0 16 7.178 16 16v16h-96zm-128 56c0-4.411 3.589-8 8-8h336c4.411 0 8 3.589 8 8v40c-4.931 0-331.567 0-352 0zm313.469 360.761c-.407 8.545-7.427 15.239-15.981 15.239h-242.976c-8.555 0-15.575-6.694-15.981-15.239l-13.751-288.761h302.44z"/><path d="m256 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z"/><path d="m336 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z"/><path d="m176 448c8.836 0 16-7.164 16-16v-208c0-8.836-7.164-16-16-16s-16 7.164-16 16v208c0 8.836 7.163 16 16 16z"/></g></svg>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="sheet__btns hidden">
+          <button class="btn btn--outline-blue sheet__save-btn">Save edits</button>
+          <button class="btn btn--outline-red sheet__cancel-btn">Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="popup-section hidden">
+    <div class="popup-alert">
+      <div class="popup-alert__text">Options saved</div>
+      <svg class="table__head-icon icon icon-small icon-grey" id="cross-icon" viewBox="0 0 329.26933 329"xmlns="http://www.w3.org/2000/svg"><path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/></svg>
+    </div>
+  </div>
+
+
+
+  <script src="/options/options.js"></script>
+</body>
+</html>

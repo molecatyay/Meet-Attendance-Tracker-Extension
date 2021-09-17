@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: #797979;
+}
+
+.icon-left {
+  left: 0.5em;
+}
+
+.icon-right {
+  right: 0.5em;
+}
+
+.icon-small {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.icon-medium {
+  width: 0.825rem;
+  height: 0.825rem;
+}
+
+.icon-grey {
+  fill: #797979;
+}
+
+.link-white {
+  color: white;
+}
+
+.btn {
+  font-family: "Red Hat Display", sans-serif;
+  padding: 0.5em 1.125em;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  text-decoration: underline;
+}
+
+.btn--fill-blue {
+  background-color: #297C96;
+  color: white;
+  border: 1px solid #297C96;
+}
+
+.btn--outline-blue {
+  background-color: transparent;
+  color: #297C96;
+  border: 1px solid #297C96;
+}
+
+.btn--outline-red {
+  background-color: transparent;
+  color: #DEA4A4;
+  border: 1px solid #DEA4A4;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=general-styles.css.map */

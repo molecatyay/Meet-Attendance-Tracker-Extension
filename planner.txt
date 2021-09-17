@@ -1,0 +1,43 @@
+REFERENCES:
+meet attendance project example: https://github.com/p2pdops/meet-attendance-collector
+chrome docs: https://developer.chrome.com/docs/extensions/reference/storage/
+flaticon credits: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
+TODOS:
+1 popup.html: prompt users to go to 2
+2 options.html: users set a name list, convert it to an array and store in storage
+2.1 options.html: users may upload more name lists and name each list
+2.11 if users give a list the same name, warn them
+2.2 options.html: users may use a seat list instead
+3 content.js: GET fullList in storage; 
+4 when summon, get attendees in current meeting; find absentees; get time;
+4.1 send absentees from content.js to popup.js; store absentees in storage with timestamp; show absentees and timestamp in popup.html
+4.2 offer to set absentees as present (for wrong name formats etc.)
+5 can still change options in options.html anytime
+6 the next day, clear all absentee data in storage
+
+
+STORAGE ORGANIZATION:
+
+
+{
+  "J2K": {
+    "color": "#ccc",
+    "config": "seats",
+
+    "seats": 55,
+    "filterConfig": "junior"
+    
+  },
+  "J2ADL": {
+    "title": "J2ADL",
+    "color": "#ccc",
+    "config": "names",
+    "names": 38
+    
+  },
+    
+}
+
+

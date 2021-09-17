@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&family=Roboto:wght@400;700&display=swap");
+body {
+  margin: 3rem 4.5rem;
+  font-size: 100%;
+}
+
+h1, h3 {
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Red Hat Display", sans-serif;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+.content-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: calc(min(8vw, 8rem));
+}
+
+.div-circle-absolute {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  width: calc(23.5rem + 10vw);
+  height: calc(23.5rem + 10vw);
+  background-color: #c2ecf9;
+  border-radius: 50%;
+  left: -11rem;
+  top: -11rem;
+}
+
+.div-triangle-absolute {
+  z-index: -1;
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: calc(13.5rem + 3vw) solid transparent;
+  border-right: calc(27rem + 1vw) solid rgba(245, 228, 67, 0.39);
+  border-bottom: calc(13.5rem + 3vw) solid transparent;
+  -webkit-transform: rotate(140deg);
+          transform: rotate(140deg);
+  left: 0;
+}
+
+.div-form {
+  margin: 0 auto;
+  width: 22rem;
+}
+
+.div-right {
+  margin-top: -3em;
+  position: relative;
+}
+
+.div-left {
+  position: relative;
+}
+
+.div-right-inner {
+  margin-top: 12.325rem;
+  margin-right: 1.5rem;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.startup {
+  text-align: center;
+}
+
+.startup__icon {
+  fill: gainsboro;
+  width: 10rem;
+  height: 10rem;
+  display: block;
+  margin: 3rem auto;
+}
+
+.icon-exit-modal {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.modal {
+  position: relative;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+  padding: 5rem 3.5rem;
+  overflow: hidden;
+  z-index: 2;
+  background-color: white;
+}
+
+.modal--add {
+  width: 85%;
+  min-height: 37.5rem;
+  margin: calc((100vh - 37.5rem) / 2) auto;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.form__switch {
+  position: relative;
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.form__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 1rem;
+}
+
+.form__slider:before {
+  position: absolute;
+  content: "";
+  height: 0.825rem;
+  width: 0.825rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .form__slider {
+  background-color: #2196F3;
+}
+
+input:checked + .form__slider:before {
+  -webkit-transform: translateX(0.9rem);
+          transform: translateX(0.9rem);
+}
+
+.form__section, .form__status {
+  margin-bottom: 1.25em;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.form__textfield {
+  background-color: white;
+  min-height: 12.5rem;
+  overflow: auto;
+  resize: vertical;
+}
+
+.form__input, .form__textfield, .form__number, .form__select {
+  border: 1px solid #797979;
+  border-radius: 2px;
+  padding: 0.5em;
+  width: 100%;
+}
+
+.form__info-text, .form__error-text {
+  margin-top: 0.25em;
+  display: inline-block;
+}
+
+.form__info-text {
+  color: #bebdbd;
+}
+
+.form__status {
+  color: #53b853;
+  display: block;
+}
+
+.form__error-text {
+  color: #eb8383;
+}
+
+.form__error-field {
+  border: 1px solid #eb8383;
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+  content: attr(data-ph);
+  color: gray;
+}
+
+.sheet {
+  margin-top: 3rem;
+  max-width: 28rem;
+}
+
+.sheet__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.sheet__tab-item, .sheet__tab-icon {
+  font-family: "Red Hat Display", sans-serif;
+  padding: 0.5em 1em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.sheet__tab-item {
+  -webkit-filter: contrast(0.5);
+          filter: contrast(0.5);
+}
+
+.sheet__tab-item:hover, .sheet__tab--current {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.sheet__body, .sheet__startup {
+  width: 100%;
+  padding: 2rem 2.75rem;
+}
+
+.sheet__body {
+  border-width: 2px;
+  border-style: solid;
+  max-height: calc(min(65vh, 38rem));
+  overflow-y: auto;
+}
+
+.sheet__body-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12fr 1fr;
+      grid-template-columns: 12fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.sheet__body--edit {
+  border-style: dashed;
+}
+
+.sheet__body-ol {
+  margin-left: 2ch;
+}
+
+.sheet__body-label {
+  display: block;
+  margin-bottom: 0.353em;
+}
+
+.sheet__body-item + .sheet__body-item {
+  border-top: 1px solid gainsboro;
+  padding-top: 1.25em;
+}
+
+.sheet__body-item {
+  margin-bottom: 1.25em;
+}
+
+.sheet__body-field:not([type="color"]) {
+  width: 100%;
+  padding: 0.125em;
+}
+
+.sheet__textfield {
+  min-height: 12.5rem;
+  overflow: auto;
+  resize: vertical;
+}
+
+.sheet__btns {
+  margin-top: 1.5rem;
+}
+
+.sheet__startup {
+  background-color: gainsboro;
+}
+
+.sheet__startup-arrow {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.config {
+  border: 1px solid black;
+}
+
+.popup-alert {
+  background-color: #98cd98;
+  color: #326732;
+  display: inline-block;
+  padding: 0.75em 1.25em;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 3px 7px #797979;
+          box-shadow: -1px 3px 7px #797979;
+  position: absolute;
+  bottom: 3.5rem;
+}
+
+.popup-alert__text {
+  display: inline-block;
+  margin-right: 0.75em;
+}
+/*# sourceMappingURL=options-styles.css.map */

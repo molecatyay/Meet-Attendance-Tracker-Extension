@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+$font-titles: "Red Hat Display", sans-serif;
+$font-text: "Roboto", sans-serif;
+
+$clr-red-200: #DEA4A4;
+$clr-red-400:rgb(235, 131, 131);
+$clr-blue-200: rgb(194,236,249);
+$clr-blue-600: #297C96;
+$clr-black-100: rgb(220, 220, 220);
+$clr-black-400: rgb(190, 189, 189);
+$clr-black-700: rgb(121, 121, 121);
+$clr-yellow-200: rgba(245, 228, 67, 0.39);
+$clr-green-200: hsl(120, 35%, 70%);
+$clr-green-300:rgb(83, 184, 83);
+$clr-green-400: hsl(120, 35%, 30%);
+
+///-----------------------------------------------------///
+/// General Styles
+///-----------------------------------------------------///
+body {
+  margin: 3rem 4.5rem;
+  font-size: 100%;
+  // overflow-x: hidden;
+}
+h1, h3 {
+  font-family: $font-titles;
+  text-align: center;
+}
+h2 {
+  font-family: $font-titles;
+  margin-bottom: 0.5em;
+}
+h3 {
+  font-weight: 400;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+///-----------------------------------------------------///
+/// Utilities
+///-----------------------------------------------------///
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: calc(min(8vw, 8rem));
+}
+
+.div-circle-absolute {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  width: calc(23.5rem + 10vw);
+  height: calc(23.5rem + 10vw);
+  background-color: $clr-blue-200;
+  border-radius: 50%;
+  left: -11rem;
+  top: -11rem;
+}
+
+.div-triangle-absolute {
+  z-index: -1;
+  display: inline-block;
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-top: calc(13.5rem + 3vw) solid transparent;
+  border-right: calc(27rem + 1vw) solid $clr-yellow-200;
+  border-bottom: calc(13.5rem + 3vw) solid transparent;
+  transform: rotate(140deg);
+  left: 0;
+}
+
+.div-form {
+  margin: 0 auto;
+  width: 22rem;
+}
+
+.div-right {
+  margin-top: -3em;
+  position: relative;
+}
+
+.div-left {
+  position: relative;
+}
+
+.div-right-inner {
+  margin-top: 12.325rem;
+  margin-right: 1.5rem;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+///-----------------------------------------------------///
+/// Startup Styles
+///-----------------------------------------------------///
+.startup {
+  text-align: center;
+  &__icon {
+    fill: $clr-black-100;
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    margin: 3rem auto;
+  }
+}
+
+///-----------------------------------------------------///
+/// Modal Styles
+///-----------------------------------------------------///
+.icon-exit-modal {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.modal {
+  position: relative;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+  padding: 5rem 3.5rem;
+  overflow: hidden;
+  z-index: 2;
+  background-color: white;
+  &--add {
+  width: 85%;
+  min-height: 37.5rem;
+  margin: calc((100vh - 37.5rem) / 2) auto;
+  }
+
+}
+
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+///-----------------------------------------------------///
+/// Form in set name list modal
+///-----------------------------------------------------///
+.form {
+  //switch start-------
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 2.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+  
+  &__switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 1rem;
+  }
+  
+  &__slider:before {
+    position: absolute;
+    content: "";
+    height: 0.825rem;
+    width: 0.825rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + &__slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + &__slider:before {
+    transform: translateX(0.9rem);
+  }
+  //switch end--------
+
+  &__section, &__status {
+    margin-bottom: 1.25em;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  &__textfield {
+    background-color: white;
+    min-height: 12.5rem;
+    overflow: auto;
+    resize: vertical;
+  }
+
+  &__input, &__textfield, &__number, &__select {
+    border: 1px solid $clr-black-700;
+    border-radius: 2px;
+    padding: 0.5em;
+    width: 100%;
+  }
+  &__info-text, &__error-text {
+    margin-top: 0.25em;
+    display: inline-block;
+  }
+  &__info-text {
+    color: $clr-black-400;
+  }
+  &__status {
+    color: $clr-green-300;
+    display: block;
+  }
+
+  &__error-text {
+    color: $clr-red-400;
+  }
+  &__error-field {
+    border: 1px solid $clr-red-400;
+  }
+}
+
+
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(data-ph);
+  color:gray;
+}
+
+///-----------------------------------------------------///
+/// Sheet Styles
+///-----------------------------------------------------///
+.sheet {
+  margin-top: 3rem;
+  max-width: 28rem;
+
+  &__tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  &__tab-item, &__tab-icon {
+    font-family: $font-titles;
+    padding: 0.5em 1em;
+    flex-shrink: 0;
+  }
+  &__tab-item {
+    filter: contrast(0.5);
+  }
+  &__tab-item:hover, &__tab--current {
+    filter: none;
+  }
+
+  &__body, &__startup {
+    width: 100%;
+    padding: 2rem 2.75rem;
+  }
+  &__body {
+    border-width: 2px;
+    border-style: solid;
+    max-height: calc(min(65vh, 38rem));
+    overflow-y: auto;
+  }
+  &__body-grid {
+    display: grid;
+    grid-template-columns: 12fr 1fr;
+    grid-gap: 0.5rem;
+  }
+  &__body--edit {
+    border-style: dashed;
+  }
+  &__body-ol {
+    margin-left: 2ch;
+    // margin-right: 3.5ch;
+  }
+  &__body-label {
+    display: block;
+    margin-bottom: 0.353em;
+  }
+  &__body-item + &__body-item {
+    border-top: 1px solid $clr-black-100;
+    padding-top: 1.25em;
+  }
+  &__body-item {
+    margin-bottom: 1.25em;
+  }
+  &__body-field:not([type="color"]) {
+    width: 100%;
+    padding: 0.125em; 
+  }
+  &__textfield {
+    min-height: 12.5rem;
+    overflow: auto;
+    resize: vertical;
+  }
+  &__btns {
+    margin-top: 1.5rem;
+  }
+  &__startup {
+    background-color: $clr-black-100;
+  }
+  &__startup-arrow {
+    transform: rotate(270deg);
+  }
+}
+
+///-----------------------------------------------------///
+/// List Configuration Styles
+///-----------------------------------------------------///
+.config {
+  border: 1px solid black;
+}
+
+///-----------------------------------------------------///
+/// Popup green alert
+///-----------------------------------------------------///
+.popup-alert {
+  background-color: $clr-green-200;
+  color: $clr-green-400;
+  display: inline-block;
+  padding: 0.75em 1.25em;
+  border-radius: 3px;
+  box-shadow: -1px 3px 7px $clr-black-700;
+  position: absolute;
+  bottom: 3.5rem;
+  &__text {
+    display: inline-block;
+    margin-right: 0.75em;
+  }
+}
+
